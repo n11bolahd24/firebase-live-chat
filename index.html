@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Firebase Live Chat</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="live-chat">
+
+    <div class="chat-header">
+
+        <div class="left">
+
+            <i class="fa-solid fa-comments"></i>
+
+            <span>LIVE CHAT</span>
+
+        </div>
+
+        <div class="right">
+
+            <span class="online-dot"></span>
+
+            <span id="onlineCount">0 Online</span>
+
+        </div>
+
+    </div>
+
+    <div id="pinMessage" class="pin-message" style="display:none;"></div>
+
+    <div id="typingBox" class="typing-box"></div>
+
+    <div id="chatMessages" class="chat-messages"></div>
+
+    <div class="chat-footer">
+
+        <button id="emojiBtn">
+
+            😀
+
+        </button>
+
+        <textarea
+
+        id="message"
+
+        maxlength="200"
+
+        placeholder="Tulis pesan..."></textarea>
+
+        <button id="sendBtn">
+
+            <i class="fa-solid fa-paper-plane"></i>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ===========================
+     MODAL NAMA
+=========================== -->
+
+<div id="nameModal" class="modal">
+
+    <div class="modal-content">
+
+        <h2>Selamat Datang</h2>
+
+        <p>Masukkan nama untuk mulai chat</p>
+
+        <input
+
+        id="username"
+
+        maxlength="20"
+
+        type="text"
+
+        placeholder="Nama Anda">
+
+        <button id="saveName">
+
+            MASUK CHAT
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ===========================
+     EMOJI PICKER
+=========================== -->
+
+<div id="emojiPicker" class="emoji-picker">
+
+😀 😁 😂 🤣 😃 😄 😅 😆 😉
+
+😊 😍 😘 😎 🤩 😭 😡 😱 🤔
+
+👍 👏 🙏 ❤️ 🧡 💛 💚 💙 💜
+
+⚽ 🏆 🔥 🎉 🎊 💯 🎯 🚀 ⭐
+
+</div>
+
+<!-- ===========================
+     FIREBASE SDK
+=========================== -->
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+<!-- ===========================
+     CONFIG FIREBASE
+=========================== -->
+
+<script src="firebase-config.js"></script>
+
+<!-- ===========================
+     CHAT ENGINE
+=========================== -->
+
+<script src="chat.js"></script>
+
+</body>
+  </html>
